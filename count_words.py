@@ -13,8 +13,12 @@ def count_words(text):
 
 
 def main():
-    text = input()
-    print(count_words(text))
+    input_filename = 'input_files/input_for_count_words.txt'
+    with open(input_filename, 'r') as input_file:
+        text = input_file.read()
+    output_filename = 'output_files/count_words_output.txt'
+    with open(output_filename, 'w') as output_file:
+        output_file.write(str(count_words(text)))
 
 
 if __name__ == '__main__':
