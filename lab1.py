@@ -7,11 +7,11 @@ from fibonacci import fibonacci_to_list
 
 
 TASKS = {
-'count-words': count_words,
-'most-frequent-words': most_frequent_words,
-'quicksort': quicksort,
-'mergesort': mergesort,
-'fibonacci': fibonacci_to_list,
+    'count-words': count_words,
+    'most-frequent-words': most_frequent_words,
+    'quicksort': quicksort,
+    'mergesort': mergesort,
+    'fibonacci': fibonacci_to_list,
 }
 
 
