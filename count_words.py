@@ -16,9 +16,9 @@ def count_words(text):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--input-file', '-i', type=str,
-                        default=None, help='Path to the input file.')
+                        default=None, help='Path to an input file.')
     parser.add_argument('--output-file', '-o', type=str,
-                        default=None, help='Path to the output file.')
+                        default=None, help='Path to an output file.')
     args = parser.parse_args()
     input_filename = args.input_file
     if input_filename:
