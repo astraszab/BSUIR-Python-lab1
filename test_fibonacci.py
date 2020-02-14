@@ -6,4 +6,4 @@ def test_zero():
 
 
 def test_six():
-    assert fibonacci_to_list(5) == [1, 1, 2, 3, 5, 8]
+    assert fibonacci_to_list(6) == [1, 1, 2, 3, 5, 8]
