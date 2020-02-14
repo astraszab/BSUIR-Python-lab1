@@ -1,5 +1,6 @@
 import numpy as np
 import string
+import argparse
 
 
 def count_words(text):
@@ -13,12 +14,24 @@ def count_words(text):
 
 
 def main():
-    input_filename = 'input_files/input_for_count_words.txt'
-    with open(input_filename, 'r') as input_file:
-        text = input_file.read()
-    output_filename = 'output_files/count_words_output.txt'
-    with open(output_filename, 'w') as output_file:
-        output_file.write(str(count_words(text)))
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--input-file', '-i', type=str,
+                        default=None, help='Path to the input file.')
+    parser.add_argument('--output-file', '-o', type=str,
+                        default=None, help='Path to the output file.')
+    args = parser.parse_args()
+    input_filename = args.input_file
+    if input_filename:
+        with open(input_filename, 'r') as input_file:
+            text = input_file.read()
+    else:
+        text = input()
+    output_filename = args.output_file
+    if output_filename:
+        with open(output_filename, 'w') as output_file:
+            output_file.write(str(count_words(text)))
+    else:
+        print(count_words(text))
 
 
 if __name__ == '__main__':
