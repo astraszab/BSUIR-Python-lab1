@@ -31,7 +31,7 @@ def main():
     else:
         n = input()
     output_filename = args.output_file
-    if output_filename:
+    if output_filename is not None:
         with open(output_filename, 'w') as output_file:
             output_file.write(str(fibonacci_to_list(n)))
     else:
