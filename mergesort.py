@@ -53,7 +53,7 @@ def main():
                         default=None, help='Path to an output file.')
     args = parser.parse_args()
     input_filename = args.input_file
-    if input_filename:
+    if input_filename is not None:
         with open(input_filename, 'r') as input_file:
             numbers_string = input_file.read()
     else:
